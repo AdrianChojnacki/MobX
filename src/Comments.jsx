@@ -2,8 +2,7 @@ import React from 'react';
 import { useCommentsStore } from './stores/hooks';
 
 const Comments = () => {
-  const { comments, removeComment } = useCommentsStore;
-  console.log(comments);
+  const { comments, removeComment } = useCommentsStore();
 
   const handleClick = event => {
     const id = Number(event.target.dataset.id);
