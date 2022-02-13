@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
+import { useCommentsStore } from './stores/hooks';
+
 const Form = () => {
   const [inputData, setInputData] = useState('');
+  const { addComment } = useCommentsStore();
 
   const handleOnChange = event => setInputData(event.target.value);
 
@@ -13,8 +16,7 @@ const Form = () => {
       comment: inputData,
     };
 
-    console.log(comment);
-
+    addComment(comment);
     setInputData('');
   }
 
