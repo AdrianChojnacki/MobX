@@ -1,13 +1,16 @@
 import React from 'react';
 
+import Form from './Form';
+import StoreProvider from './stores/StoreProvider';
+
 const App = () => {
   return (
-    <div>
-      <h1>LALALA</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus animi magnam! Pariatur hic fugiat quo ipsum quas doloremque voluptatibus eos voluptas officia beatae officiis possimus doloribus, labore voluptatem laborum.
-      </p>
-    </div>
+    <StoreProvider>
+      <div>
+        <h1>Opinie na temat naszej najnowszej książki o programowaniu autorstwa Samuraja i Domana</h1>
+        <Form />
+      </div>
+    </StoreProvider>
   )
 }
 
